@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/landing_page.dart';
 
 class Matutina extends StatefulWidget {
   @override

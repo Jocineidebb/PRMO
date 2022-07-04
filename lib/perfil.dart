@@ -22,16 +22,9 @@ class Perfil extends StatefulWidget {
 }
 
 class _PerfilState extends State<Perfil> {
-  var _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   var isLoading = false;
 
-  void _submit() {
-    final isValid = _formKey.currentState?.validate();
-    if (!isValid!) {
-      return;
-    }
-    _formKey.currentState?.save();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +32,7 @@ class _PerfilState extends State<Perfil> {
     return Scaffold(
       backgroundColor: const Color(0xFFFFF8DC),
       appBar: AppBar(
+        toolbarHeight: 120,
         backgroundColor:Color(0xFFFcee8b7),
       ),
 

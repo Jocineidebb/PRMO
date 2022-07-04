@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/salutation_page.dart';
+import 'package:mobile/salutation_page.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
