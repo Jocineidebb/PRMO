@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/perfil.dart';
+import 'package:mobile/principal.dart';
 import 'package:mobile/sla.dart';
 import 'package:mobile/teste.dart';
 
@@ -15,6 +16,7 @@ class _FooterState extends State<Footer> {
   final List<Widget> _screens = [
     Sla(),
     Teste(),
+    HomePage(),
     Perfil(),
   ];
 
