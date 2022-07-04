@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/footer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -6,6 +7,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 4)).then((_) {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Footer()));
+    });
+  }
   final _formKey = GlobalKey<FormState>();
   var isLoading = false;
 

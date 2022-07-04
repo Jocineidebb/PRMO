@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:mobile/salutation_page.dart';
 
 
-class HomePage extends StatefulWidget {
+class Landing_page extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<Landing_page> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 4)).then((_) {
+    Future.delayed(Duration(seconds: 5)).then((_) {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Matutina()));
     });
   }
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xFFF5F5F5),
+        backgroundColor: Color(0xFFFFF8DC),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                 style: TextStyle(
                   fontSize: 40,
                   fontFamily: 'Sparkling',
-                  color: Color(0xFF0C09092B),
+                  color: Colors.black12,
                 ),
               ),
             ],

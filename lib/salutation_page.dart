@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/principal.dart';
 
 class Matutina extends StatefulWidget {
   @override
@@ -6,17 +7,17 @@ class Matutina extends StatefulWidget {
 }
 
 class _MatutinaState extends State<Matutina> {
-  /*@override
+  @override
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 4)).then((_) {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
     });
-  }*/
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: Color(0xFFFFF8DC),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +36,7 @@ class _MatutinaState extends State<Matutina> {
               style: TextStyle(
                 fontSize: 28,
                 fontFamily: 'Futura',
-                color: Color(0xFF0C09092B),
+                color: Colors.black12,
               ),
             ),
           ],
