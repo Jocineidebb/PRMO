@@ -1,16 +1,7 @@
-# mobile
+# ProjetoPRMO-924
+O repositório foi criado para o desenvolvimento de um aplicativo para a matéria de PRMO (Programação Móvel)
 
-A new Flutter project.
+StudlyBasis 
 
-## Getting Started
+O aplicativo tem o objetivo de auxiliara estudantes em seus estudos. Fazendo um controle sobre as matérias que serão estudadas e o tempo de estudo dedidaco a cada uma delas. Dessa forma, o sistema deve permitir a criação de ciclos de estudos, em que o usuário possa definir as matérias que serão estudadas. Dentro disso, utilizando uma técnica de gamificação, após o fim de cada ciclo, o usuário é premiado (no caso, com uma figurinha para preencher o seu álbum). Ainda, dentro do app, deve ser possível a apresentação de um breve histórico da sua evolução de estudos (gráficos com horas estudadas por matéria, gráfico de desempenho e a identificação de dificuldades). 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
