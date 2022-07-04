@@ -1,64 +1,99 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/perfil.dart';
-import 'package:mobile/principal.dart';
-import 'package:mobile/sla.dart';
-import 'package:mobile/teste.dart';
 
-class Footer extends StatefulWidget {
-  const Footer({Key? key}) : super(key: key);
+import 'initial_screnn.dart';
 
+class MyApp extends StatelessWidget {
   @override
-  State<Footer> createState() => _FooterState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: InitialScreen(),
+      theme: ThemeData(
+        //cardColor: Colors.deepOrange,
+
+        //brightness: Brightness.dark,
+      ),
+    );
+  }
 }
 
-class _FooterState extends State<Footer> {
-  int _actualIndex = 0;
-  final List<Widget> _screens = [
-    Sla(),
-    Teste(),
-    Perfil(),
-    HomePage(),
-  ];
+class Perfil extends StatefulWidget {
+  @override
+  _PerfilState createState() => _PerfilState();
+}
 
-  void onTabTapped (int index) {
-    setState(() {
-      _actualIndex = index;
-    });
+class _PerfilState extends State<Perfil> {
+  var _formKey = GlobalKey<FormState>();
+  var isLoading = false;
+
+  void _submit() {
+    final isValid = _formKey.currentState?.validate();
+    if (!isValid!) {
+      return;
+    }
+    _formKey.currentState?.save();
   }
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      body: _screens[_actualIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        iconSize: 32,
-        backgroundColor: Color(0xFFFcee8b7),
-        type: BottomNavigationBarType.fixed,
-        onTap: onTabTapped,
-        currentIndex: _actualIndex,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.timer_outlined, color: Colors.grey),
-            label: '',
-            activeIcon: Icon(Icons.timer, color: Colors.grey),
+      backgroundColor: const Color(0xFFFFF8DC),
+      appBar: AppBar(
+        backgroundColor:Color(0xFFFcee8b7),
+      ),
+
+      //body
+      body: Padding(
+
+        padding: const EdgeInsets.all(30.0),
+
+        //form
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: NetworkImage(
+                              "https://i.pinimg.com/originals/73/e2/58/73e258735eead4dc795c678f3311bee0.jpg")
+                      ),
+
+                    ),
+                  ),
+
+                  Text(
+                    "Nome",
+                    style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.grey),
+                  ),
+                ],
+              ),
+              //styling
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.1,
+              ),
+
+              Text(
+                "biografia",
+                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.grey),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.4,
+              ),
+
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.rocket_launch_outlined, color: Colors.grey),
-            label: '',
-            activeIcon: Icon(Icons.rocket_launch, color: Colors.grey),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book_outlined, color: Colors.grey),
-            label: '',
-            activeIcon: Icon(Icons.menu_book, color: Colors.grey),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline, color: Colors.grey),
-            label: '',
-            activeIcon: Icon(Icons.person, color: Colors.grey),
-          ),
-        ],
+        ),
       ),
     );
+
   }
 }
