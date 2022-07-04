@@ -14,9 +14,9 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   int _actualIndex = 0;
   final List<Widget> _screens = [
-    Sla(),
-    Teste(),
     HomePage(),
+    Teste(),
+    Sla(),
     Perfil(),
   ];
 
