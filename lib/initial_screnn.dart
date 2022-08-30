@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'footer.dart';
+import 'menu.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({Key? key}) : super(key: key);
@@ -19,7 +18,7 @@ class _InitialScreenState extends State<InitialScreen> {
           child: Text('Página Inicial'),
         ),
       ),
-      bottomNavigationBar: Footer(),
+      bottomNavigationBar: Menu(),
     );
   }
 }

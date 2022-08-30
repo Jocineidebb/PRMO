@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/principal.dart';
+import 'package:mobile/login.dart';
 
-class Matutina extends StatefulWidget {
+class Salutation extends StatefulWidget {
   @override
-  _MatutinaState createState() => _MatutinaState();
+  _SalutationState createState() => _SalutationState();
 }
 
-class _MatutinaState extends State<Matutina> {
+class _SalutationState extends State<Salutation> {
   @override
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 4)).then((_) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => Login()));
     });
   }
 
@@ -26,13 +27,15 @@ class _MatutinaState extends State<Matutina> {
               duration: Duration(
                 milliseconds: 5000,
               ),
-              child: Image.network('https://i.ibb.co/NT9HPhX/7651008.png'),
+              child: Image.network('https://i.ibb.co/svRdHVV/caderno.png'),
+              width: 181,
+              height: 179,
             ),
             SizedBox(
               height: 10,
             ),
             Text(
-              'Boa noite, estudante!',
+              'Bem-vindo, estudante!',
               style: TextStyle(
                 fontSize: 28,
                 fontFamily: 'Futura',

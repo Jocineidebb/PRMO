@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/salutation_page.dart';
 
-
 class Landing_page extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _LandingPageState createState() => _LandingPageState();
 }
 
-class _HomePageState extends State<Landing_page> {
+class _LandingPageState extends State<Landing_page> {
   @override
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 5)).then((_) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Matutina()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => Salutation()));
     });
   }
 
@@ -52,4 +52,3 @@ class _HomePageState extends State<Landing_page> {
     );
   }
 }
-

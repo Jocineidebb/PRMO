@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/perfil.dart';
-import 'package:mobile/principal.dart';
-import 'package:mobile/sla.dart';
-import 'package:mobile/teste.dart';
+import 'package:mobile/profile.dart';
+import 'package:mobile/stop_watch.dart';
+import 'package:mobile/graphics.dart';
+import 'package:mobile/sticker_album.dart';
 
-class Footer extends StatefulWidget {
-  const Footer({Key? key}) : super(key: key);
-
+class Menu extends StatefulWidget {
+  const Menu({Key? key}) : super(key: key);
   @override
-  State<Footer> createState() => _FooterState();
+  State<Menu> createState() => _MenuState();
 }
 
-class _FooterState extends State<Footer> {
+class _MenuState extends State<Menu> {
   int _actualIndex = 0;
   final List<Widget> _screens = [
     HomePage(),
-    Teste(),
-    Sla(),
-    Perfil(),
+    Graphics(),
+    StickerAlbum(),
+    UserProfile(),
   ];
 
-  void onTabTapped (int index) {
+  void onTabTapped(int index) {
     setState(() {
       _actualIndex = index;
     });
@@ -48,9 +47,9 @@ class _FooterState extends State<Footer> {
             activeIcon: Icon(Icons.rocket_launch, color: Colors.grey),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book_outlined, color: Colors.grey),
+            icon: Icon(Icons.menu_book, color: Colors.grey),
             label: '',
-            activeIcon: Icon(Icons.menu_book, color: Colors.grey),
+            activeIcon: Icon(Icons.menu_book_outlined, color: Colors.grey),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline, color: Colors.grey),

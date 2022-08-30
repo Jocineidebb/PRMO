@@ -8,14 +8,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  void initState() {
-    super.initState();
-    Future.delayed(Duration(seconds: 4)).then((_) {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Menu()));
-    });
-  }
-
   final _formKey = GlobalKey<FormState>();
   var isLoading = false;
 
@@ -59,13 +51,13 @@ class _HomePageState extends State<HomePage> {
                 style: TextStyle(fontSize: 40),
               ),
               const SizedBox(
-                height: 50,
+                height: 40,
               ),
               //text input
               ElevatedButton(
                 onPressed: () {},
                 child: const Text(
-                  '  INICIAR  ',
+                  'INICIAR',
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(0xFF571F04),
